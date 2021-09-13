@@ -1,14 +1,12 @@
-Instruction
+Readme Installation Instruction
 
-Installation
-
-1. Once was the project is downloaded, go to angular/dist and 
-copy the folder angular and paste it to the xampp/htdocs.
-2. Create a database "ip_management".
-3. Open to your terminal cd to the projects backend
+1. Create a database "ip_management".
+2. Open to your terminal cd to the projects backend
 and run the command "php artisan migrate".
-4. Once the command successfully migrated,
+3. Once the command successfully migrated,
 run this command "php artisan serve".
+4. To your terminal cd angular folder ang run 
+the command "ng serve".
 
 Usage
 
