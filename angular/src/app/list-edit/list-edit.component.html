@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row justify-content-center">
+      <div class="col-md-8">
+          <div class="card">
+              <div class="card-header">Update Ip Address</div>
+
+              <div class="card-body">
+
+                <form [formGroup]="form" (ngSubmit)="submit()">
+
+                  <div class="form-group row">
+                    <label for="ip" class="col-md-4 col-form-label text-md-right">Ip Address</label>
+
+                    <div class="col-md-6">
+                        <input id="ip" type="text" formControlName="ip" placeholder="Ip Address" class="form-control" required readonly>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="comment" class="col-md-4 col-form-label text-md-right">Label/Comment</label>
+
+                    <div class="col-md-6">
+                        <input id="comment" type="text" formControlName="comment" placeholder="Label/Comment" class="form-control" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-0">
+                    <div class="col-md-8 offset-md-4">
+                        <button type="submit" class="btn btn-success">
+                            Submit
+                        </button>
+                    </div>
+                  </div>
+
+                </form>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

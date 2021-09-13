@@ -1,0 +1,26 @@
+<div class="card" *ngIf="list">
+  <div class="card-header">
+    <h4 class="card-title">{{ list.ip.ip }}</h4>
+  </div>
+  <div class="card-body">
+
+    <table class="table table-sm table-bordered text-center">
+
+      <thead>
+        <tr>
+          <th>Ip Address</th>
+          <th>Label/Comment</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let c of list.comment">
+          <td>{{ list.ip.ip }}</td>
+          <td>{{ c.comment }}</td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+</div>

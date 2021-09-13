@@ -1,0 +1,43 @@
+<div class="card">
+  <div class="card-header">
+    <h4 class="card-title" *ngIf="user">Welcome {{ user.name }} !</h4>
+  </div>
+  <div class="card-body">
+
+    <form [formGroup]="form" (ngSubmit)="create()" class="row gy-2 gx-3 align-items-center mb-3">
+      <div class="col-auto">
+        <input type="text" formControlName="ip" class="form-control" placeholder="Ip Address">
+      </div>
+      <div class="col-auto">
+        <input type="text" formControlName="comment" class="form-control" placeholder="Label/Comment">
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-success" [disabled]="!form.valid">Create</button>
+      </div>
+    </form>
+
+    <table class="table table-sm table-bordered text-center">
+
+      <thead>
+        <tr>
+          <th>Ip Address</th>
+          <th>Label/Comment</th>
+          <th>Tools</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let i of table">
+          <td>{{ i.ip }}</td>
+          <td>{{ i.comment }}</td>
+          <td>
+            <button type="button" class="btn btn-sm btn-info" style="margin-right: 5px;" routerLink="/view/{{ i.id }}">View</button>
+            <button type="button" class="btn btn-sm btn-danger" routerLink="/list/edit/{{ i.id }}" >Edit</button>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+</div>
