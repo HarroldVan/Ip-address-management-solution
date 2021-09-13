@@ -18,3 +18,5 @@ localhost/angular.
 and can view the previous comment.
 3. List page, this page needs to login in ordere
 to add, update the ip address.
+4. Login page
+5. Register page
